@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+    def show 
+        @article = Article.find(params[:id])
+    end 
+    
     def new
     end
 
@@ -7,11 +11,12 @@ class ArticlesController < ApplicationController
 
        @article.save
 
-       redirect_to @article
+       redirect_to @article # es igual a poner redirect_to article_path(@article)
     end
 
 private 
 
     def article_params
         params.require(:article).permit(:title, :text)
+    end
 end
