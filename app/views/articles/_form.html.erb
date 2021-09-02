@@ -14,19 +14,23 @@
         </ul>
       </div>
     <% end %>
+   <div class="mb-3">
+      <%= form.label :title, "Titulo", class: "form-label" %><br>
+      <%= form.text_field :title, class: 'form-control' %>
+    </div>
    
-    <p>
-      <%= form.label :title %><br>
-      <%= form.text_field :title %>
-    </p>
+    <div class="mb-3">
+      <%= form.label :text, "Texto", class: 'form-label' %><br>
+      <%= form.text_area :text, class: 'form-control' %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :photo, "Texto", class: 'form-label' %><br>
+      <%= form.file_field :photo, class: 'form-control' %>
+    </div>
    
-    <p>
-      <%= form.label :text %><br>
-      <%= form.text_area :text %>
-    </p>
-   
-    <p>
-      <%= form.submit %>
-    </p>
+    
+    <%= form.submit "Enviar", class: 'btn btn-primary' %>
+  
    
   <% end %>

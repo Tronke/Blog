@@ -1,6 +1,8 @@
 <h3>Detalle del articulo</p>
 
-
+<% if @article.photo.attached? %>
+<%= image_tag(url_for(@article.photo),width: 300, height: 300) %>
+<% end %>
 
 <p><strong>Titulo</strong></p>
 <p><%= @article.title %></p>
